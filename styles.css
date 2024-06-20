@@ -1,0 +1,109 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--background-color);
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+:root {
+    --background-color: #f0f2f5;
+    --calculator-background-color: #ffffff;
+    --display-background-color: #222;
+    --display-text-color: #fff;
+    --button-background-color: #f9f9f9;
+    --button-hover-background-color: #e0e0e0;
+    --equal-button-background-color: #4CAF50;
+    --equal-button-hover-background-color: #45a049;
+    --text-color: #000;
+}
+
+body.dark-theme {
+    --background-color: #333;
+    --calculator-background-color: #444;
+    --display-background-color: #555;
+    --display-text-color: #fff;
+    --button-background-color: #666;
+    --button-hover-background-color: #777;
+    --equal-button-background-color: #4CAF50;
+    --equal-button-hover-background-color: #45a049;
+    --text-color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.theme-selector {
+    margin-bottom: 20px;
+}
+
+.history {
+    width: 320px;
+    background-color: var(--calculator-background-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    margin-bottom: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.history p {
+    margin: 5px 0;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+.calculator {
+    background-color: var(--calculator-background-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 320px;
+}
+
+.display {
+    background-color: var(--display-background-color);
+    color: var(--display-text-color);
+    font-size: 2em;
+    padding: 20px;
+    text-align: right;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    background-color: var(--button-background-color);
+    border: none;
+    padding: 20px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--button-hover-background-color);
+}
+
+.equal {
+    background-color: var(--equal-button-background-color);
+    color: white;
+    grid-column: span 2;
+}
+
+.equal:hover {
+    background-color: var(--equal-button-hover-background-color);
+}
